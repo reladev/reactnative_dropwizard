@@ -1,6 +1,10 @@
 group 'com.reladev'
 version '1.0-SNAPSHOT'
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.3'
+}
+
 project.ext {
     configPath = "$rootProject.projectDir/config/"
 }
