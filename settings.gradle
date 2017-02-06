@@ -1,2 +1,4 @@
 rootProject.name = 'reactnative_dropwizard'
 
+include 'app-client-api'
+

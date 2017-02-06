@@ -1,12 +1,5 @@
-group 'com.reladev'
-version '1.0-SNAPSHOT'
-
 task wrapper(type: Wrapper) {
     gradleVersion = '3.3'
-}
-
-project.ext {
-    configPath = "$rootProject.projectDir/config/"
 }
 
 buildscript {
@@ -20,25 +13,6 @@ buildscript {
     }
 }
 
-apply plugin: 'application'
-apply plugin: 'kotlin'
-
-sourceCompatibility = 1.8
-
 repositories {
     mavenCentral()
-}
-
-dependencies {
-    compile group: 'org.jetbrains.kotlin', name:'kotlin-stdlib', version: kotlin_version
-    compile group: 'io.dropwizard', name: 'dropwizard-core', version: '1.0.5'
-    compile group: 'ru.vyarus', name: 'dropwizard-guicey', version: '4.0.1'
-    testCompile group: 'junit', name: 'junit', version: '4.11'
-}
-
-
-
-mainClassName = "com.reladev.rndw.CleanCodeApplication"
-run {
-    args 'server', configPath + 'app_config.yml'
 }
